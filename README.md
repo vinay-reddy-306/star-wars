@@ -63,6 +63,29 @@ To check javascript linting rules.
 
 To format or prettier codebase using `Prettier`.
 
+## Design Motivation & Thought Process
+
+While the assignment seems simple, this project is built with **scalability and professional engineering standards** in mind:
+
+## Component Reusability
+- `Loader`, `ErrorMessage`, and `SortableHeader` abstract away common UI logic.
+- Easy to extend for other sortable lists or API-driven views.
+
+## Scalable Architecture
+- Clear separation between **store** (Redux slices), **components**, and **pages**.
+- Pages contain only layout/presentation + business logic separation is encouraged with custom hooks (planned in future).
+
+## Redux Toolkit
+- Used for state consistency, caching, and better API handling.
+- Easily expandable for additional slices (e.g., characters, planets).
+
+## Front-End UX
+- Minimal but clean styling using `flexbox` and consistent layout.
+- Sort icons help users understand current state.
+- Centered layout enhances focus and aesthetics.
+- Error handling and loading feedback make the UI robust.
+
+
 ## Folder Structure
 
 ```
