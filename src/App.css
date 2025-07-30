@@ -1,3 +1,126 @@
-.App {
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  background-image: url('../public/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 8px;
+  outline: none;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 2rem;
+  color: #ffe81f;
+}
+
+button {
+  background-color: #ffe81f;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: #e6d100;
+}
+
+.loader,
+.error {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #ff4c4c;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1c1c1c;
+}
+
+th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
+
+th {
+  background-color: #2a2a2a;
+  color: #ffe81f;
+  user-select: none;
+}
+
+th:hover {
+  background-color: #3d3d3d;
+}
+
+a {
+  color: #80bfff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Fade-in animation for page load */
+.container {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sortable-header {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sortable-header-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sort-icon {
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.sort-icon.inactive {
+  opacity: 0.3;
 }
