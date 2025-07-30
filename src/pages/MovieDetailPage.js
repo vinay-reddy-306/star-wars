@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { fetchMovies } from "../features/movies/moviesSlice";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 import "../App.css";
@@ -8,7 +9,14 @@ import "../App.css";
 const MovieDetailPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { items: movies, status, error } = useSelector((state) => state.movies);
+
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchMovies());
+    }
+  }, [dispatch, status]);
 
   const movie = movies.find((m) => m.episode_id.toString() === id);
 
