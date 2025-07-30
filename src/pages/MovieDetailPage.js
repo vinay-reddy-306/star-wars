@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
-import { fetchMovies } from "../features/movies/moviesSlice";
+import { fetchMovies } from "../store/moviesSlice";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
-import "../App.css";
+import "../styles/App.css";
 
 const MovieDetailPage = () => {
   const { id } = useParams();

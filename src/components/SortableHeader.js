@@ -1,6 +1,5 @@
-import React from "react";
 import { FaSort, FaSortUp, FaSortDown } from "react-icons/fa";
-import "../App.css";
+import "../styles/App.css";
 
 const SortableHeader = ({ label, headerKey, sortKey, sortOrder, setSortKey, setSortOrder }) => {
   const isActive = headerKey === sortKey;

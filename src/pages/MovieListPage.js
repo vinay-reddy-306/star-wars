@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchMovies } from "../features/movies/moviesSlice";
+import { fetchMovies } from "../store/moviesSlice";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
 import ErrorMessage from "../components/ErrorMessage";
 import SortableHeader from "../components/SortableHeader";
-import "../App.css";
+import "../styles/App.css";
 
 const MovieListPage = () => {
   const dispatch = useDispatch();
