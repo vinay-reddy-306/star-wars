@@ -124,3 +124,8 @@ a:hover {
 .sort-icon.inactive {
   opacity: 0.3;
 }
+
+.not-found {
+  padding: 2rem;
+  text-align: center;
+}

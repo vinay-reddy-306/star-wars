@@ -98,6 +98,7 @@ While the assignment seems simple, this project is built with **scalability and 
     |-- pages/
         |-- MovieDetailPage.js
         |-- MovieListPage.js
+        |-- NotFound.js
     |-- store/
         |-- index.js
         |-- moviesSlice.js
@@ -109,7 +110,7 @@ While the assignment seems simple, this project is built with **scalability and 
 ```
 
 - `components` : Folder to put all shared Component
-- `pages` : Folder to put both movieList and movieDetail page
+- `pages` : Folder to put both movieList, movieDetail and notFound page
 - `store`: Folder to put all store related data
 - `styles` : Folder to put our Styles that reusable
 
